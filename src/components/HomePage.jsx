@@ -69,7 +69,7 @@ export const HomePage = () => {
             {/* Service 2 */}
             <div className="space-y-4">
               <img
-                src="3.png"
+                src="web.webp"
                 alt="E-commerce Development"
                 className="w-full h-56 object-cover rounded-lg shadow-lg"
                 loading="lazy"
