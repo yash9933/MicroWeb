@@ -11,8 +11,10 @@ export const Layout = ({ children }) => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-1">
+              <Link to="/" className="text-gray-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50 transition-colors">
               <span className="text-blue-600 font-bold text-xl">Micro</span>
               <span className="text-gray-800 font-bold text-xl">Web</span>
+              </Link>
             </div>
 
             <div className="hidden md:flex items-center space-x-8">
@@ -20,9 +22,6 @@ export const Layout = ({ children }) => {
               <Link to="/services" className="text-gray-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50 transition-colors">Services</Link>
               <Link to="/about" className="text-gray-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50 transition-colors">About Us</Link>
               <Link to="/contact" className="text-gray-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50 transition-colors">Contact us</Link>
-              <button className="text-gray-600 hover:text-gray-900">
-                <Search className="h-5 w-5" />
-              </button>
             </div>
 
             <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
