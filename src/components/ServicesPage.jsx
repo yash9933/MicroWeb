@@ -1,4 +1,9 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 export const ServicesPage = () => {
+  const navigate = useNavigate();
+  
   const services = [
     {
       title: "Web Development",
@@ -22,6 +27,10 @@ export const ServicesPage = () => {
     }
   ];
 
+  const handleServiceClick = () => {
+    navigate('/contact');
+  };
+
   return (
     <div className="py-20 bg-gradient-to-b from-indigo-100 to-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -40,7 +49,8 @@ export const ServicesPage = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+              onClick={handleServiceClick}
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105 cursor-pointer"
             >
               <div className="flex items-center justify-center w-16 h-16 bg-indigo-100 text-indigo-600 text-4xl rounded-full mb-6 mx-auto">
                 {service.icon}
