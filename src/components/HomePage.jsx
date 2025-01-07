@@ -107,26 +107,32 @@ export const HomePage = () => {
       </section>
 
       {/* Contact Us Section */}
-      <section className="bg-indigo-600 text-white py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8">Get In Touch</h2>
-          <p className="text-base sm:text-lg mb-6">We'd love to hear from you! Let's work together to bring your vision to life.</p>
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
-            <Link
-              to="/contact"
-              className="inline-block bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 w-full sm:w-auto text-center"
-            >
-              Contact Us
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-block bg-transparent border-2 border-white hover:bg-white hover:text-indigo-600 px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-full sm:w-auto text-center"
-            >
-              Schedule a Demo
-            </Link>
-          </div>
-        </div>
-      </section>
+<section className="bg-indigo-600 text-white py-12 sm:py-16 flex items-center">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-8 text-center">
+    <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tight">
+      Get In Touch
+    </h1>
+    <p className="text-lg sm:text-xl text-indigo-200 max-w-xl mx-auto">
+      We'd love to hear from you! Let's work together to bring your vision to life.
+    </p>
+    <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+      <a
+        href="/contact"
+        className="bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+      >
+        Contact Us
+      </a>
+      <a
+        href="/contact"
+        className="text-pink-300 font-medium hover:text-pink-400 hover:underline transition-all duration-300 transform hover:scale-105"
+      >
+        Schedule a Demo
+      </a>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Footer Section */}
       <footer className="bg-gray-800 text-white py-12">
@@ -135,7 +141,7 @@ export const HomePage = () => {
             Crafted with ❤️ by MicroWeb Solutions. All rights reserved.
           </p>
         </div>
-      </footer>
+      </footer> 
     </div>
   );
 };
