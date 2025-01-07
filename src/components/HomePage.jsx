@@ -29,9 +29,10 @@ export const HomePage = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl transform rotate-3 opacity-50"></div>
               <img 
-                src="https://images.unsplash.com/photo-1581091870639-0e0a82e8a6f7" 
+                src="/1.jpg" 
                 alt="Web Development"
                 className="relative rounded-2xl shadow-xl transition-all duration-500 transform hover:scale-105"
+                loading="lazy"
               />
             </div>
           </div>
@@ -47,9 +48,10 @@ export const HomePage = () => {
               {/* Service 1 */}
               <div className="space-y-4">
                 <img
-                  src="https://images.unsplash.com/photo-1593642532400-6c8d5e4c15cf"
+                  src="2.jpg"
                   alt="Responsive Design"
                   className="w-full h-56 object-cover rounded-lg shadow-lg"
+                  loading="lazy"
                 />
                 <h3 className="text-2xl font-semibold text-gray-800">Responsive Web Design</h3>
                 <p className="text-gray-600">
@@ -59,9 +61,10 @@ export const HomePage = () => {
               {/* Service 2 */}
               <div className="space-y-4">
                 <img
-                  src="https://images.unsplash.com/photo-1516573265064-d94d5760d5f4"
+                  src="3.png"
                   alt="E-commerce Development"
                   className="w-full h-56 object-cover rounded-lg shadow-lg"
+                  loading="lazy"
                 />
                 <h3 className="text-2xl font-semibold text-gray-800">E-commerce Development</h3>
                 <p className="text-gray-600">
@@ -71,9 +74,10 @@ export const HomePage = () => {
               {/* Service 3 */}
               <div className="space-y-4">
                 <img
-                  src="https://images.unsplash.com/photo-1520742877174-1f370e2f4745"
+                  src="4.webp"
                   alt="Web Application Development"
                   className="w-full h-56 object-cover rounded-lg shadow-lg"
+                  loading="lazy"
                 />
                 <h3 className="text-2xl font-semibold text-gray-800">Web Application Development</h3>
                 <p className="text-gray-600">
@@ -114,7 +118,7 @@ export const HomePage = () => {
         <footer className="bg-gray-800 text-white py-12">
           <div className="max-w-7xl mx-auto text-center">
             <p className="text-lg">
-              Crafted with ❤️ by [Your Company Name]. All rights reserved.
+              Crafted with ❤️ by MicroWeb Solutions. All rights reserved.
             </p>
           </div>
         </footer>

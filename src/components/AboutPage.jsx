@@ -17,7 +17,7 @@ export const AboutPage = () => {
             </div>
             <div className="relative">
               <img 
-                src="/api/placeholder/500/400" 
+                src="6.jpg" 
                 alt="Our Team"
                 className="rounded-2xl shadow-xl"
               />
