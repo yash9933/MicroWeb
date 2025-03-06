@@ -11,7 +11,7 @@ export const AboutPage = () => {
               About MicroWeb
             </h2>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              We're a team of passionate developers and designers dedicated to creating exceptional web experiences. With years of expertise in the industry, we bring creativity and technical excellence to every project.
+              We're a team of passionate developers & designers dedicated to creating exceptional web experiences. With years of expertise in the industry, we bring creativity and technical excellence to every project.
             </p>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Our mission is to help businesses thrive in the digital world by providing innovative web solutions that drive growth and success.
