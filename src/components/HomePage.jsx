@@ -1,7 +1,31 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import bgImage from '../assets/bg.jpg'; 
 
 export const HomePage = () => {
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll('.scroll-reveal');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <div className="relative bg-white min-h-screen overflow-hidden">
       {/* Modern Hero Section */}
@@ -19,8 +43,8 @@ export const HomePage = () => {
         </div>
         
         {/* Animated background elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl opacity-50 animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl opacity-50 animate-float" style={{ animationDelay: '2s' }}></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-32">
           <div className="grid lg:grid-cols-1 gap-16 items-center justify-center">
@@ -41,14 +65,14 @@ export const HomePage = () => {
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 pt-4">
                 <Link
                   to="/contact"
-                  className="group relative px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold text-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105 shadow-lg"
+                  className="group relative px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold text-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-105 shadow-lg"
                 >
                   <span className="relative z-10 group-hover:text-white transition-colors duration-300">Get Started</span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                 </Link>
                 <Link
                   to="/about"
-                  className="px-8 py-4 bg-white/90 backdrop-blur-md text-gray-900 font-semibold text-lg rounded-xl border-2 border-white/50 hover:bg-white hover:border-white shadow-lg transition-all duration-300"
+                  className="px-8 py-4 bg-white/90 backdrop-blur-md text-gray-900 font-semibold text-lg rounded-xl border-2 border-white/50 hover:bg-white hover:border-white shadow-lg transition-all duration-500 hover:scale-105"
                 >
                   Learn More
                 </Link>
@@ -74,7 +98,7 @@ export const HomePage = () => {
       {/* Services Section - Modern Cards */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Our Web Development Services
             </h2>
@@ -85,12 +109,12 @@ export const HomePage = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Service 1 */}
-            <div className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-gray-200 transition-all duration-300 hover:shadow-xl">
+            <div className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 scroll-reveal scroll-reveal-delay-1">
               <div className="aspect-video mb-6 rounded-xl overflow-hidden">
                 <img
                   src="2.jpg"
                   alt="Responsive Design"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
               </div>
@@ -101,12 +125,12 @@ export const HomePage = () => {
             </div>
             
             {/* Service 2 */}
-            <div className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-gray-200 transition-all duration-300 hover:shadow-xl">
+            <div className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 scroll-reveal scroll-reveal-delay-2">
               <div className="aspect-video mb-6 rounded-xl overflow-hidden">
                 <img
                   src="web.webp"
                   alt="E-commerce Development"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
               </div>
@@ -117,12 +141,12 @@ export const HomePage = () => {
             </div>
             
             {/* Service 3 */}
-            <div className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-gray-200 transition-all duration-300 hover:shadow-xl">
+            <div className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 scroll-reveal scroll-reveal-delay-3">
               <div className="aspect-video mb-6 rounded-xl overflow-hidden">
                 <img
                   src="4.webp"
                   alt="Web Application Development"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
               </div>
@@ -138,7 +162,7 @@ export const HomePage = () => {
       {/* About Us Section - Modern Design */}
       <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center scroll-reveal">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">About Us</h2>
             <p className="text-xl text-gray-600 leading-relaxed">
               At MicroWeb, we believe in turning your ideas into reality with cutting-edge web technologies. 
@@ -158,7 +182,7 @@ export const HomePage = () => {
           }}></div>
         </div>
         
-        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center space-y-8">
+        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center space-y-8 scroll-reveal">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
             Ready to Get Started?
           </h1>
@@ -168,13 +192,13 @@ export const HomePage = () => {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
             <Link
               to="/contact"
-              className="group px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold text-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105"
+              className="group px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold text-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-105"
             >
               Contact Us
             </Link>
             <Link
               to="/contact"
-              className="px-8 py-4 text-white font-semibold text-lg rounded-xl border-2 border-white/20 hover:border-white/40 hover:bg-white/5 transition-all duration-300"
+              className="px-8 py-4 text-white font-semibold text-lg rounded-xl border-2 border-white/20 hover:border-white/40 hover:bg-white/5 transition-all duration-500"
             >
               Schedule a Demo
             </Link>

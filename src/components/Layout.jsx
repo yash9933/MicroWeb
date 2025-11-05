@@ -22,7 +22,7 @@ export const Layout = ({ children }) => {
                 className="font-semibold text-xl tracking-tight px-3 py-2 rounded-lg hover:bg-gray-100/50 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-bold">Micro</span>
+                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-bold">Micro </span>
                 <span className="text-gray-900 font-bold">Web</span>
               </Link>
             </div>

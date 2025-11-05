@@ -167,7 +167,7 @@ export const ContactPage = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-gray-900 text-white px-8 py-3 rounded-xl font-semibold text-base hover:bg-gray-800 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] mt-4"
+              className="w-50% bg-gray-900 text-white px-8 py-3 rounded-xl font-semibold text-base hover:bg-gray-800 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] mt-4"
             >
               Send Message
             </button>
