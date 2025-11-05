@@ -4,7 +4,7 @@ export const HomePage = () => {
   return (
     <div className="relative bg-gradient-to-b from-indigo-100 via-purple-100 to-blue-100 min-h-screen">
       {/* Background pattern */}
-      <div className="absolute inset-0 bg-blue-900/10 pattern-grid-lg opacity-10"></div>
+      <div className="absolute inset-0 bg-blue-900/10 pattern-grid-lg opacity-10 pointer-events-none"></div>
 
       {/* Main content area */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-32">
@@ -19,7 +19,7 @@ export const HomePage = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-6">
               <a
-                href="/services"
+                href="/contact"
                 className="bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Get Started →
@@ -35,7 +35,7 @@ export const HomePage = () => {
 
           {/* Right Section - Image */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl transform rotate-3 opacity-50"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl transform rotate-3 opacity-50 pointer-events-none"></div>
             <img 
               src="/1.jpg" 
               alt="Web Development"
@@ -107,7 +107,7 @@ export const HomePage = () => {
       </section>
 
       {/* Contact Us Section */}
-<section className="bg-indigo-600 text-white py-12 sm:py-16 flex items-center">
+      <section className="bg-indigo-600 text-white pt-4 sm:pt-6 pb-24 sm:pb-24 flex items-center">
   <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-8 text-center">
     <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tight">
       Get In Touch
@@ -134,14 +134,7 @@ export const HomePage = () => {
 
 
 
-      {/* Footer Section */}
-      <footer className="bg-gray-800 text-white py-12">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-lg">
-            Crafted with ❤️ by MicroWeb Solutions. All rights reserved.
-          </p>
-        </div>
-      </footer> 
+      {/* Footer handled globally in Layout */}
     </div>
   );
 };

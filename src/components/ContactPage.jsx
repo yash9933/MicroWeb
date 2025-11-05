@@ -71,21 +71,21 @@ export const ContactPage = () => {
   };
 
   return (
-    <div className="py-20 bg-gradient-to-b from-indigo-50 to-gray-100">
+    <div className="h-[calc(100vh-4rem)] overflow-hidden pt-8 pb-24 -mb-24 bg-gradient-to-b from-indigo-50 to-gray-100">
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         {/* Page Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-extrabold text-indigo-900 mb-4">Get in Touch</h2>
+        <div className="text-center mb-6">
+          <h2 className="text-5xl font-extrabold text-indigo-900 mb-2">Get in Touch</h2>
           <p className="text-lg text-indigo-700">
             We'd love to hear from you. Let's connect!
           </p>
         </div>
 
         {/* Contact Form Card */}
-        <div className="bg-white rounded-2xl shadow-lg p-10">
-          <form className="space-y-8" onSubmit={handleSubmit}>
+        <div className="bg-white rounded-2xl shadow-lg p-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             {/* Name Fields */}
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   First Name
@@ -95,7 +95,7 @@ export const ContactPage = () => {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 ${
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 ${
                     errors.firstName ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="John"
@@ -113,7 +113,7 @@ export const ContactPage = () => {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 ${
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 ${
                     errors.lastName ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Doe"
@@ -134,7 +134,7 @@ export const ContactPage = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 ${
+                className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 ${
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="you@example.com"
@@ -153,8 +153,8 @@ export const ContactPage = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                rows="5"
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 ${
+                rows="4"
+                className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 ${
                   errors.message ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="Write your message here..."
@@ -167,7 +167,7 @@ export const ContactPage = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white px-8 py-4 rounded-lg hover:bg-indigo-700 transition-all transform hover:scale-105 shadow-md"
+              className="w-full bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-all transform hover:scale-105 shadow-md"
             >
               Send Message
             </button>
@@ -177,7 +177,7 @@ export const ContactPage = () => {
 
       {/* Custom Success Popup */}
       {showSuccess && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="fixed inset-0 flex items-center justify-center">
           <div className="bg-white p-6 rounded-lg shadow-xl transform transition-all duration-300 ease-in-out">
             <div className="flex items-center justify-center gap-2 mb-4">
               <div className="bg-green-100 p-2 rounded-full">

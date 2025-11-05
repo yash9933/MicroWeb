@@ -79,6 +79,12 @@ export const Layout = ({ children }) => {
       <div className="pt-16">
         {children}
       </div>
+      {/* Global Fixed Footer */}
+      <footer className="fixed bottom-0 left-0 right-0 bg-gray-800 text-white py-6 z-40">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-lg">Crafted with ❤️ by MicroWeb Solutions. All rights reserved®</p>
+        </div>
+      </footer>
     </div>
   )
 }
