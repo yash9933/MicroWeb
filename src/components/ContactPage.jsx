@@ -71,23 +71,23 @@ export const ContactPage = () => {
   };
 
   return (
-    <div className="h-[calc(100vh-4rem)] overflow-hidden pt-8 pb-24 -mb-24 bg-gradient-to-b from-indigo-50 to-gray-100">
-      <div className="max-w-4xl mx-auto px-6 lg:px-8">
+    <div className="h-[calc(100vh-5rem)] overflow-hidden pt-4 pb-24 -mb-24 bg-gradient-to-b from-gray-50 via-white to-gray-50">
+      <div className="max-w-3xl mx-auto px-6 lg:px-8 py-4 overflow-y-auto h-full">
         {/* Page Header */}
-        <div className="text-center mb-6">
-          <h2 className="text-5xl font-extrabold text-indigo-900 mb-2">Get in Touch</h2>
-          <p className="text-lg text-indigo-700">
-            We'd love to hear from you. Let's connect!
+        <div className="text-center mb-4 animate-fadeIn">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">Get in Touch</h2>
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
+            We'd love to hear from you. Let's connect and bring your vision to life.
           </p>
         </div>
 
-        {/* Contact Form Card */}
-        <div className="bg-white rounded-2xl shadow-lg p-6">
-          <form className="space-y-6" onSubmit={handleSubmit}>
+        {/* Contact Form Card - Modern Design */}
+        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 animate-slideIn">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             {/* Name Fields */}
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-gray-700 mb-1">
                   First Name
                 </label>
                 <input
@@ -95,17 +95,17 @@ export const ContactPage = () => {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 ${
-                    errors.firstName ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${
+                    errors.firstName ? 'border-red-500 focus:ring-red-500' : 'border-gray-200 hover:border-gray-300'
                   }`}
                   placeholder="John"
                 />
                 {errors.firstName && (
-                  <p className="mt-1 text-sm text-red-600">{errors.firstName}</p>
+                  <p className="mt-1 text-xs text-red-600">{errors.firstName}</p>
                 )}
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-gray-700 mb-1">
                   Last Name
                 </label>
                 <input
@@ -113,20 +113,20 @@ export const ContactPage = () => {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 ${
-                    errors.lastName ? 'border-red-500' : 'border-gray-300'
+                  className={`w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${
+                    errors.lastName ? 'border-red-500 focus:ring-red-500' : 'border-gray-200 hover:border-gray-300'
                   }`}
                   placeholder="Doe"
                 />
                 {errors.lastName && (
-                  <p className="mt-1 text-sm text-red-600">{errors.lastName}</p>
+                  <p className="mt-1 text-xs text-red-600">{errors.lastName}</p>
                 )}
               </div>
             </div>
 
             {/* Email Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-semibold text-gray-700 mb-1">
                 Email
               </label>
               <input
@@ -134,40 +134,40 @@ export const ContactPage = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 ${
-                  errors.email ? 'border-red-500' : 'border-gray-300'
+                className={`w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all ${
+                  errors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-200 hover:border-gray-300'
                 }`}
                 placeholder="you@example.com"
               />
               {errors.email && (
-                <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                <p className="mt-1 text-xs text-red-600">{errors.email}</p>
               )}
             </div>
 
             {/* Message Field */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-semibold text-gray-700 mb-1">
                 Message
               </label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                rows="4"
-                className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 ${
-                  errors.message ? 'border-red-500' : 'border-gray-300'
+                rows="3"
+                className={`w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none ${
+                  errors.message ? 'border-red-500 focus:ring-red-500' : 'border-gray-200 hover:border-gray-300'
                 }`}
-                placeholder="Write your message here..."
+                placeholder="Tell us about your project..."
               ></textarea>
               {errors.message && (
-                <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+                <p className="mt-1 text-xs text-red-600">{errors.message}</p>
               )}
             </div>
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-all transform hover:scale-105 shadow-md"
+              className="w-full bg-gray-900 text-white px-8 py-3 rounded-xl font-semibold text-base hover:bg-gray-800 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] mt-4"
             >
               Send Message
             </button>
@@ -175,17 +175,19 @@ export const ContactPage = () => {
         </div>
       </div>
 
-      {/* Custom Success Popup */}
+      {/* Custom Success Popup - Modern Design */}
       {showSuccess && (
-        <div className="fixed inset-0 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-xl transform transition-all duration-300 ease-in-out">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <div className="bg-green-100 p-2 rounded-full">
-                <Check className="h-6 w-6 text-green-500" />
+        <div className="fixed inset-0 flex items-center justify-center z-50 animate-fadeIn">
+          <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md mx-4 border border-gray-100 transform transition-all duration-300">
+            <div className="flex flex-col items-center gap-4">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                <Check className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900">Thank you!</h3>
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank you!</h3>
+                <p className="text-gray-600">We'll be in touch soon.</p>
+              </div>
             </div>
-            <p className="text-center text-gray-600">We'll be in touch soon.</p>
           </div>
         </div>
       )}

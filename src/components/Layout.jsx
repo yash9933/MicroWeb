@@ -13,25 +13,61 @@ export const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-white">
-      <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-1">
+      <nav className="fixed top-0 left-0 right-0 glass z-50 border-b border-gray-200/50 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            <div className="flex items-center space-x-2">
               <Link 
                 to="/" 
-                className="text-gray-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50 transition-colors"
+                className="font-semibold text-xl tracking-tight px-3 py-2 rounded-lg hover:bg-gray-100/50 transition-all duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <span className="text-blue-600 font-bold text-xl">Micro</span>
-                <span className="text-gray-800 font-bold text-xl">Web</span>
+                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-bold">Micro</span>
+                <span className="text-gray-900 font-bold">Web</span>
               </Link>
             </div>
 
-            <div className="hidden md:flex items-center space-x-8">
-              <Link to="/" className="text-pink-500 font-medium px-3 py-2 rounded-md hover:bg-pink-50 transition-colors">Home</Link>
-              <Link to="/services" className="text-gray-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50 transition-colors">Services</Link>
-              <Link to="/about" className="text-gray-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50 transition-colors">About Us</Link>
-              <Link to="/contact" className="text-gray-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50 transition-colors">Contact us</Link>
+            <div className="hidden md:flex items-center space-x-1">
+              <Link 
+                to="/" 
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  location.pathname === '/' 
+                    ? 'text-gray-900 bg-gray-100/50' 
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
+                }`}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/services" 
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  location.pathname === '/services' 
+                    ? 'text-gray-900 bg-gray-100/50' 
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
+                }`}
+              >
+                Services
+              </Link>
+              <Link 
+                to="/about" 
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  location.pathname === '/about' 
+                    ? 'text-gray-900 bg-gray-100/50' 
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
+                }`}
+              >
+                About
+              </Link>
+              <Link 
+                to="/contact" 
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  location.pathname === '/contact' 
+                    ? 'text-gray-900 bg-gray-100/50' 
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
+                }`}
+              >
+                Contact
+              </Link>
             </div>
 
             <button 
@@ -44,31 +80,47 @@ export const Layout = ({ children }) => {
           </div>
 
           {isMenuOpen && (
-            <div className="md:hidden py-4 animate-fadeIn">
-              <div className="flex flex-col space-y-2">
+            <div className="md:hidden py-4 animate-fadeIn border-t border-gray-200/50 mt-4">
+              <div className="flex flex-col space-y-1">
                 <Link 
                   to="/" 
-                  className="text-pink-500 font-medium px-3 py-2 rounded-md hover:bg-pink-50 transition-colors"
+                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                    location.pathname === '/' 
+                      ? 'text-gray-900 bg-gray-100/50' 
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
+                  }`}
                 >
                   Home
                 </Link>
                 <Link 
                   to="/services" 
-                  className="text-gray-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50 transition-colors"
+                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                    location.pathname === '/services' 
+                      ? 'text-gray-900 bg-gray-100/50' 
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
+                  }`}
                 >
                   Services
                 </Link>
                 <Link 
                   to="/about" 
-                  className="text-gray-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50 transition-colors"
+                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                    location.pathname === '/about' 
+                      ? 'text-gray-900 bg-gray-100/50' 
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
+                  }`}
                 >
-                  About Us
+                  About
                 </Link>
                 <Link 
                   to="/contact" 
-                  className="text-gray-600 font-medium px-3 py-2 rounded-md hover:bg-gray-50 transition-colors"
+                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                    location.pathname === '/contact' 
+                      ? 'text-gray-900 bg-gray-100/50' 
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
+                  }`}
                 >
-                  Contact us
+                  Contact
                 </Link>
               </div>
             </div>
@@ -76,13 +128,13 @@ export const Layout = ({ children }) => {
         </div>
       </nav>
 
-      <div className="pt-16">
+      <div className="pt-20">
         {children}
       </div>
       {/* Global Fixed Footer */}
-      <footer className="fixed bottom-0 left-0 right-0 bg-gray-800 text-white py-6 z-40">
+      <footer className="fixed bottom-0 left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-t border-gray-800 text-gray-300 py-6 z-40">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-lg">Crafted with ❤️ by MicroWeb Solutions. All rights reserved®</p>
+          <p className="text-sm font-medium">Crafted with ❤️ by MicroWeb Solutions. All rights reserved®</p>
         </div>
       </footer>
     </div>
