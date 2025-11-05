@@ -1,29 +1,39 @@
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
+import bgImage from '../assets/bg.jpg'; 
 
 export const HomePage = () => {
   return (
     <div className="relative bg-white min-h-screen overflow-hidden">
       {/* Modern Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Subtle gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"></div>
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${bgImage})`
+          }}
+        >
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/35 to-black/25"></div>
+        </div>
         
         {/* Animated background elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl opacity-50"></div>
         
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-32">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-1 gap-16 items-center justify-center">
             {/* Left Section - Text Content */}
             <div className="space-y-8 text-center lg:text-left animate-fadeIn">
               <div className="space-y-4">
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight tracking-tight">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight drop-shadow-2xl [text-shadow:_0_4px_12px_rgb(0_0_0_/_0.8)]">
                   Crafting Digital
-                  <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                  <span className="block text-blue-300 [text-shadow:_0_4px_12px_rgb(0_0_0_/_0.8)]">
                     Excellence
                   </span>
                 </h1>
-                <p className="text-xl sm:text-2xl text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                <p className="text-xl sm:text-2xl text-white max-w-2xl mx-auto lg:mx-0 leading-relaxed drop-shadow-xl [text-shadow:_0_2px_8px_rgb(0_0_0_/_0.6)]">
                   Transform your vision into reality with modern, scalable web solutions that drive business growth.
                 </p>
               </div>
@@ -31,14 +41,14 @@ export const HomePage = () => {
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 pt-4">
                 <Link
                   to="/contact"
-                  className="group relative px-8 py-4 bg-gray-900 text-white rounded-xl font-semibold text-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105"
+                  className="group relative px-8 py-4 bg-white text-gray-900 rounded-xl font-semibold text-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105 shadow-lg"
                 >
-                  <span className="relative z-10">Get Started</span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="relative z-10 group-hover:text-white transition-colors duration-300">Get Started</span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 </Link>
                 <Link
                   to="/about"
-                  className="px-8 py-4 text-gray-700 font-semibold text-lg rounded-xl border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-300"
+                  className="px-8 py-4 bg-white/90 backdrop-blur-md text-gray-900 font-semibold text-lg rounded-xl border-2 border-white/50 hover:bg-white hover:border-white shadow-lg transition-all duration-300"
                 >
                   Learn More
                 </Link>
@@ -46,7 +56,7 @@ export const HomePage = () => {
             </div>
 
             {/* Right Section - Image with modern styling */}
-            <div className="relative animate-slideIn">
+            {/* <div className="relative animate-slideIn">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-3xl blur-2xl opacity-50"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
@@ -56,7 +66,7 @@ export const HomePage = () => {
                   loading="lazy"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

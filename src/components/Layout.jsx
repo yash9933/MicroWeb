@@ -32,7 +32,7 @@ export const Layout = ({ children }) => {
                 to="/" 
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   location.pathname === '/' 
-                    ? 'text-gray-900 bg-gray-100/50' 
+                    ? 'text-blue-600 bg-blue-50 font-semibold' 
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
                 }`}
               >
@@ -42,7 +42,7 @@ export const Layout = ({ children }) => {
                 to="/services" 
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   location.pathname === '/services' 
-                    ? 'text-gray-900 bg-gray-100/50' 
+                    ? 'text-blue-600 bg-blue-50 font-semibold' 
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
                 }`}
               >
@@ -52,7 +52,7 @@ export const Layout = ({ children }) => {
                 to="/about" 
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   location.pathname === '/about' 
-                    ? 'text-gray-900 bg-gray-100/50' 
+                    ? 'text-blue-600 bg-blue-50 font-semibold' 
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
                 }`}
               >
@@ -62,7 +62,7 @@ export const Layout = ({ children }) => {
                 to="/contact" 
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   location.pathname === '/contact' 
-                    ? 'text-gray-900 bg-gray-100/50' 
+                    ? 'text-blue-600 bg-blue-50 font-semibold' 
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
                 }`}
               >
@@ -84,9 +84,9 @@ export const Layout = ({ children }) => {
               <div className="flex flex-col space-y-1">
                 <Link 
                   to="/" 
-                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                  className={`relative px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                     location.pathname === '/' 
-                      ? 'text-gray-900 bg-gray-100/50' 
+                      ? 'text-blue-600 bg-blue-50 font-semibold border-l-4 border-blue-600' 
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
                   }`}
                 >
@@ -94,9 +94,9 @@ export const Layout = ({ children }) => {
                 </Link>
                 <Link 
                   to="/services" 
-                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                  className={`relative px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                     location.pathname === '/services' 
-                      ? 'text-gray-900 bg-gray-100/50' 
+                      ? 'text-blue-600 bg-blue-50 font-semibold border-l-4 border-blue-600' 
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
                   }`}
                 >
@@ -104,9 +104,9 @@ export const Layout = ({ children }) => {
                 </Link>
                 <Link 
                   to="/about" 
-                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                  className={`relative px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                     location.pathname === '/about' 
-                      ? 'text-gray-900 bg-gray-100/50' 
+                      ? 'text-blue-600 bg-blue-50 font-semibold border-l-4 border-blue-600' 
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
                   }`}
                 >
@@ -114,9 +114,9 @@ export const Layout = ({ children }) => {
                 </Link>
                 <Link 
                   to="/contact" 
-                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                  className={`relative px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                     location.pathname === '/contact' 
-                      ? 'text-gray-900 bg-gray-100/50' 
+                      ? 'text-blue-600 bg-blue-50 font-semibold border-l-4 border-blue-600' 
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/30'
                   }`}
                 >
@@ -134,7 +134,7 @@ export const Layout = ({ children }) => {
       {/* Global Fixed Footer */}
       <footer className="fixed bottom-0 left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-t border-gray-800 text-gray-300 py-6 z-40">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm font-medium">Crafted with ❤️ by MicroWeb Solutions. All rights reserved®</p>
+          <p className="text-sm font-medium">Crafted with ❤️ by MicroWeb ®</p>
         </div>
       </footer>
     </div>
