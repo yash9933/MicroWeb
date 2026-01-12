@@ -74,10 +74,13 @@ export const ContactPage = () => {
     <div className="h-[calc(100vh-5rem)] overflow-hidden pt-4 pb-24 -mb-24 bg-gradient-to-b from-gray-50 via-white to-gray-50">
       <div className="max-w-3xl mx-auto px-6 lg:px-8 py-4 overflow-y-auto h-full">
         {/* Page Header */}
-        <div className="text-center mb-4 animate-fadeIn">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">Get in Touch</h2>
-          <p className="text-base text-gray-600 max-w-2xl mx-auto">
-            We'd love to hear from you. Let's connect and bring your vision to life.
+        <div className="text-center mb-6 animate-fadeIn">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Let's Discuss Your Project</h1>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-3 leading-relaxed">
+            If you're looking to build or improve your online presence, we'd be happy to discuss your requirements.
+          </p>
+          <p className="text-sm sm:text-base text-gray-500 max-w-xl mx-auto">
+            Fill out the form below and our team will get back to you shortly.
           </p>
         </div>
 
@@ -165,12 +168,14 @@ export const ContactPage = () => {
             </div>
 
             {/* Submit Button */}
-            <button
-              type="submit"
-              className="w-50% bg-gray-900 text-white px-8 py-3 rounded-xl font-semibold text-base hover:bg-gray-800 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] mt-4"
-            >
-              Send Message
-            </button>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="bg-gray-900 text-white px-8 py-3 rounded-xl font-semibold text-base hover:bg-gray-800 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] mt-4"
+              >
+                Send
+              </button>
+            </div>
           </form>
         </div>
       </div>

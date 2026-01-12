@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, MapPin, Mail, Phone } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 
 export const Layout = ({ children }) => {
@@ -131,10 +131,80 @@ export const Layout = ({ children }) => {
       <div className="pt-20">
         {children}
       </div>
-      {/* Global Fixed Footer */}
-      <footer className="fixed bottom-0 left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-t border-gray-800 text-gray-300 py-6 z-40">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm font-medium">Crafted with ❤️ by MicroWeb ®</p>
+      {/* Global Footer */}
+      <footer className="bg-gray-900 border-t border-gray-800 text-gray-300">
+        <div className="max-w-7xl mx-auto px-6 py-12">
+          {/* Call to Action Section */}
+          <div className="text-center mb-12 pb-12 border-b border-gray-800">
+            <h3 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h3>
+            <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
+              Let's work together to bring your vision to life with modern web solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact"
+                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                Contact Us
+              </Link>
+              <Link 
+                to="/contact"
+                className="px-8 py-3 bg-transparent border-2 border-blue-600 hover:bg-blue-600 text-blue-400 hover:text-white font-semibold rounded-lg transition-all duration-200"
+              >
+                Schedule a Demo
+              </Link>
+            </div>
+          </div>
+
+          {/* Footer Content */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            {/* About Section */}
+            <div>
+              <h4 className="text-xl font-bold text-white mb-4">
+                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Micro</span>
+                <span className="text-white">web</span>
+              </h4>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Custom Web Development • Digital Marketing • Website Maintenance
+              </p>
+            </div>
+
+            {/* Contact Information */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
+              <div className="space-y-3">
+                <a href="mailto:Microwebservices02@yahoo.com" className="flex items-start gap-2 text-sm hover:text-blue-400 transition-colors group">
+                  <Mail className="w-4 h-4 mt-0.5 flex-shrink-0 text-blue-400 group-hover:scale-110 transition-transform" />
+                  <span>Microwebservices02@yahoo.com</span>
+                </a>
+                <a href="tel:+919217014504" className="flex items-start gap-2 text-sm hover:text-blue-400 transition-colors group">
+                  <Phone className="w-4 h-4 mt-0.5 flex-shrink-0 text-blue-400 group-hover:scale-110 transition-transform" />
+                  <span>+91-9217014504</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Address */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Address</h4>
+              <div className="flex items-start gap-2 text-sm">
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-blue-400" />
+                <div>
+                  <p>J 18, Upper Ground Floor</p>
+                  <p>MohanGarden, Block J</p>
+                  <p>Rama ParkRoad</p>
+                  <p>Uttam Nagar, DELHI - 110059</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="pt-8 border-t border-gray-800 text-center">
+            <p className="text-sm text-gray-400">
+              © 2026 Microweb. All rights reserved.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
